@@ -1,0 +1,17 @@
+﻿/*
+    jsonDb Test file
+    "use relax" 
+ */
+{
+  "LastName": "Torres",
+  "FirstName": "Frederic",
+  "BirthDate": "1964-12-11T00:00:00",
+  "USCitizen": false,
+  "Height": 1.8,
+  "SSN": null,
+  "__metadata": {
+    "Version": 1,
+    "Id": "6a3a9078-6dff-4c57-9da6-639e9df4337c",
+    "LastUpdate": "2013-04-20T11:59:48.5820883"
+  }
+}
