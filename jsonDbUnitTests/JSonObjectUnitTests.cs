@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DynamicSugar;
 using System.Reflection;
@@ -27,7 +28,7 @@ namespace JSonObjectUnitTests
         const double HEIGHT        = 1.8;
 
         [TestMethod]
-        public void Serialize()
+        public void Poco_Serialize()
         {
             var expectedSerialization = @"{
   'LastName': 'Torres',
@@ -47,8 +48,10 @@ namespace JSonObjectUnitTests
                 Height    = HEIGHT,
                 SSN       = SSN,
             };
-            var s = poco1.Serialize();
-            Assert.AreEqual(expectedSerialization, s);
+            
+            Assert.AreEqual(expectedSerialization, poco1.Serialize());
+            Assert.AreEqual(expectedSerialization, System.JSON.JSonObject.Serialize(poco1));
+            
         }
 
         [TestMethod]
@@ -66,6 +69,45 @@ namespace JSonObjectUnitTests
             var s = poco1.Serialize();
             var poco2 = System.JSON.JSonObject.Deserialize<Poco1>(s);
             Assert.AreEqual(s, poco2.Serialize());
+
+            var poco3 = Poco1.Deserialize<Poco1>(s);
+            Assert.AreEqual(s, poco3.Serialize());
         }
+        
+        [TestMethod]
+        public void ListString_Serialize()
+        {
+            var l = new List<string>() { "a", "b", "c", "d" };
+            
+            var expectedSerialization = @"[
+  'a',
+  'b',
+  'c',
+  'd'
+]".Replace("'", @"""");
+            var aa = System.JSON.JSonObject.Serialize(l);
+            Assert.AreEqual(expectedSerialization, System.JSON.JSonObject.Serialize(l));
+
+        }
+
+
+        [TestMethod]
+        public void DictionaryString_Serialize()
+        {
+            var l = new Dictionary<string, int>() { { "a", 1 }, { "b", 2 }, { "c", 3 }, { "d", 4 }, };
+
+            var expectedSerialization = @"{
+  'a': 1,
+  'b': 2,
+  'c': 3,
+  'd': 4
+}".Replace("'", @"""");
+
+            var aa = System.JSON.JSonObject.Serialize(l);
+            Assert.AreEqual(expectedSerialization, System.JSON.JSonObject.Serialize(l));
+
+        }
+
+
     }
 }
