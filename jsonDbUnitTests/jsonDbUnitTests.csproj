@@ -58,17 +58,18 @@
   <ItemGroup>
     <Compile Include="Data\Poco1.cs" />
     <Compile Include="Evented\EQueueUnitTests.cs" />
+    <Compile Include="JSonObjectUnitTests.cs" />
     <Compile Include="jsonDbUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Poco1.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\jsonDb\jsonDb.csproj">
       <Project>{6d1c9753-c43f-45ee-a3e0-83fc7ab05935}</Project>
       <Name>jsonDb</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Data\Poco1.json" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

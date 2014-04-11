@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonDb", "jsonDb\jsonDb.csproj", "{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonDbUnitTests", "jsonDbUnitTests\jsonDbUnitTests.csproj", "{F6B6952E-3625-4186-A1DB-A3B00CE7C3B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F4082DDD-5650-4245-B8C5-7C7247C50816}"
@@ -10,20 +10,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F4082D
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonDb", "jsonDb\jsonDb.csproj", "{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6B6952E-3625-4186-A1DB-A3B00CE7C3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6B6952E-3625-4186-A1DB-A3B00CE7C3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B6952E-3625-4186-A1DB-A3B00CE7C3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B6952E-3625-4186-A1DB-A3B00CE7C3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1C9753-C43F-45EE-A3E0-83FC7AB05935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
